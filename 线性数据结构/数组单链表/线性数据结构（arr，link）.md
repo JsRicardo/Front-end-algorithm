@@ -101,6 +101,7 @@ const reverse = reverseLink(a)
 # 排序
 * 排序的本质是比较 和 交换
 ``` javascript
+// 交换
 > function compare(a, b) {
     if (a > b) return true
     else return false
