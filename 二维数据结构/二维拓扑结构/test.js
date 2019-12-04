@@ -209,3 +209,9 @@ var domTree1 = [{
 //         if (tree1[i])
 //     }
 // }
+var root = huanyuan(qian, zhong)
+
+
+// 最小生成树
+
+// 普利姆算法(加点法)
