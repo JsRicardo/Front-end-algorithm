@@ -1,0 +1,20 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "no-empty": true,
+        "no-console": false,
+        "eofline": false,
+        "ordered-imports": false,
+        "arrow-parens": false,
+        "object-literal-sort-keys": false,
+        "triple-equals": false,
+        "no-shadowed-variable": false,
+        "one-variable-per-declaration": false,
+        "max-classes-per-file": false
+    },
+    "rulesDirectory": []
+}

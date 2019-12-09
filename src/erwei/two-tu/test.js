@@ -138,11 +138,11 @@ function compareTree(tree1, tree2) {
 }
 console.log(compareTree(a, a1))
 
-function diffList(tree1, tree2, diffList = []) {
-    if (tree1 == tree2) return diffList
+function diffList(tree1, tree2, diffLists = []) {
+    if (tree1 == tree2) return diffLists
     // 修改 删除 新增 三种情况
     if (tree1.value != tree2.value) {
-        diffList.push({
+        diffLists.push({
             type: 'update',
             origin: tree1,
             now: tree2
@@ -151,13 +151,13 @@ function diffList(tree1, tree2, diffList = []) {
         diffList(tree1.left, tree2.left)
         diffList(tree1.right, tree2.right)
     } else if (tree1 != null && tree2 == null) {
-        diffList.push({
+        diffLists.push({
             type: 'delete',
             origin: tree1,
             now: null
         })
     } else if (tree1 == null && tree2 != null) {
-        diffList.push({
+        diffLists.push({
             type: 'add',
             origin: null,
             now: tree2
@@ -166,7 +166,7 @@ function diffList(tree1, tree2, diffList = []) {
         diffList(tree1.left, tree2.left)
         diffList(tree1.right, tree2.right)
     }
-    return diffList
+    return diffLists
 }
 
 var domTree1 = [{
