@@ -1,22 +1,9 @@
-# 二维数组
-
-螺旋矩阵算法
-
-leetCode第54题
-
-螺旋矩阵就是给定一个二维数组，需要像贪吃蛇一样绕圈往内层旋转，将这个二维数组变成一维数组。
-
-处理这种问题  主要就是要处理边界问题，每一次读取了一层之后，下一次就要往内层移动一层。
-
-```ts
 const arr: number[][] = [
     [1, 2, 3, 4],
     [12, 13, 14, 5],
     [11, 16, 15, 6],
     [10, 9, 8, 7],
 ];
-// 这个数组按照螺旋矩阵旋转之后，返回的数组就应该是[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-// 从左往右，再往下，在往上，再往右循环。
 
 function luoxuan(arr: number[][]): number[] {
     // tslint:disable-next-line: curly
@@ -61,4 +48,3 @@ function luoxuan(arr: number[][]): number[] {
     return result;
 }
 console.log(luoxuan(arr));
-```
